@@ -4,10 +4,11 @@ const game = {
 
 };
 
+
 // ------ Players Object ------
 const players = {
-    player1: "O",
-    player2: "✖",
+    playerO: "O",
+    playerX: "✖",
 };
 
 // ------ Board Object ------
@@ -20,6 +21,12 @@ for (let i = 0; i < 9; i++) {
 }
 board.cells.forEach(function(cell) {
     cell.addEventListener('click', function() {
-        cell.innerHTML = "✖";
+        let player = document.getElementById("players");
+        if(player.selectedIndex == 0) {
+            cell.innerHTML = players.playerX;
+        }
+        else {
+            cell.innerHTML = players.playerO;
+        }
     });
 });

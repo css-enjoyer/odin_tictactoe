@@ -30,4 +30,25 @@ body {
 .main .body {
   background-color: black;
   grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .body .board {
+  height: 300px;
+  width: 300px;
+  border: 1px solid white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.main .body .board button {
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.main .body .board button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.main .body .board button:active {
+  background-color: rgba(255, 255, 255, 0.5);
 }/*# sourceMappingURL=style.css.map */

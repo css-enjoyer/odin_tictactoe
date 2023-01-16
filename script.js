@@ -20,7 +20,6 @@ for (let i = 0; i < 9; i++) {
 }
 board.cells.forEach(function(cell) {
     cell.addEventListener('click', function() {
-        // console.log(cell);
         cell.innerHTML = "✖";
     });
 });

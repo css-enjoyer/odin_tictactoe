@@ -37,18 +37,19 @@ body {
 .main .body .board {
   height: 300px;
   width: 300px;
-  border: 1px solid white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
 }
 .main .body .board button {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: grey;
+  border: 1px solid black;
   cursor: pointer;
+  transition: 0.1s ease-in-out;
 }
 .main .body .board button:hover {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .main .body .board button:active {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: grey;
 }/*# sourceMappingURL=style.css.map */

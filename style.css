@@ -1,9 +1,26 @@
 * {
   margin: 0;
   padding: 0;
-  border: 1px solid white;
+  box-sizing: border-box;
 }
 
 body {
+  height: 100vh;
+  width: 100%;
+}
+
+.main {
+  background-color: grey;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+}
+.main .header {
+  grid-row: 1/2;
   background-color: red;
+}
+.main .body {
+  grid-row: 2/3;
+  background-color: green;
 }/*# sourceMappingURL=style.css.map */

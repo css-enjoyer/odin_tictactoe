@@ -44,8 +44,10 @@ body {
 .main .body .board button {
   background-color: grey;
   border: 1px solid black;
+  color: white;
   cursor: pointer;
   transition: 0.1s ease-in-out;
+  font-size: 4rem;
 }
 .main .body .board button:hover {
   background-color: rgba(255, 255, 255, 0.8);

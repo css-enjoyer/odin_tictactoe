@@ -14,13 +14,20 @@ body {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: 1fr 10fr;
+  grid-template-rows: 1fr 8fr;
 }
 .main .header {
+  background-color: midnightblue;
   grid-row: 1/2;
-  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .header h1 {
+  color: white;
+  font-size: 3rem;
 }
 .main .body {
+  background-color: black;
   grid-row: 2/3;
-  background-color: green;
 }/*# sourceMappingURL=style.css.map */

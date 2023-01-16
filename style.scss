@@ -13,13 +13,21 @@ body {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 1fr 10fr;
+    grid-template-rows: 1fr 8fr;
     .header {
+        background-color: midnightblue;
         grid-row: 1 / 2;
-        background-color: red;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        h1 {
+            color: white;
+            font-size: 3rem;
+        }
     }
     .body {
+        background-color: black;
         grid-row: 2 / 3;
-        background-color: green;
     }
 }

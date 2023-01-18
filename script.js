@@ -25,9 +25,9 @@
 
 // ------------------ Board ------------------
 let boardObject = {
-    cell0: "0", cell1: "0", cell2: "0",  
-    cell3: "0", cell4: "0", cell5: "0",  
-    cell6: "0", cell7: "0", cell8: "0",  
+    cell0: 0, cell1: 0, cell2: 0,  
+    cell3: 0, cell4: 0, cell5: 0,  
+    cell6: 0, cell7: 0, cell8: 0,  
 };
 // ## Select each cell and insert into array
 let cells = [];
@@ -48,6 +48,10 @@ for (let i = 0; i < 9; i++) {
                 boardObject["cell" + i] = 2;
             }
         }
+        if(boardObject.cell0 === 1 && boardObject.cell1 === 1 && boardObject.cell2 === 1) {
+            console.log("X Wins");
+            console.log(boardObject.cell0);
+        }
     });
 };
 
@@ -65,8 +69,6 @@ let gameBoard = {
 };
 
 // ## Win Conditions
-if(boardObject.cell0 && boardObject.cell1 && boardObject.cell2) {
-    
-}
+
 
 

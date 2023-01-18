@@ -29,14 +29,26 @@ let boardObject = {
     cell3: "0", cell4: "0", cell5: "0",  
     cell6: "0", cell7: "0", cell8: "0",  
 };
-
 // ## Select each cell and insert into array
 let cells = [];
 for (let i = 0; i < 9; i++) {
     cells[i] = document.querySelector(`#cell-${i}`);
     cells[i].addEventListener("click", () => {
-        console.log(i);
-    })
+        console.log(boardObject);
+        if(cells[i].innerHTML === "") {
+            if(players.playerX) {
+                cells[i].innerHTML = "X";
+                players.playerX = false;
+                players.playerO = true;
+                boardObject["cell" + i] = 1;
+            } else {
+                cells[i].innerHTML = "O";
+                players.playerX = true;
+                players.playerO = false;
+                boardObject["cell" + i] = 2;
+            }
+        }
+    });
 };
 
 // ------------------ Players ------------------
@@ -51,4 +63,10 @@ let gameBoard = {
     gameStart: false,
     gameEnd: false
 };
+
+// ## Win Conditions
+if(boardObject.cell0 && boardObject.cell1 && boardObject.cell2) {
+    
+}
+
 

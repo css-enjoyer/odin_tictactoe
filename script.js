@@ -29,18 +29,21 @@ let boardObject = {
     cell3: "0", cell4: "0", cell5: "0",  
     cell6: "0", cell7: "0", cell8: "0",  
 };
+
 // ## Select each cell and insert into array
 let cells = [];
 for (let i = 0; i < 9; i++) {
     cells[i] = document.querySelector(`#cell-${i}`);
+    cells[i].addEventListener("click", () => {
+        console.log(i);
+    })
 };
-// ## For each cell in array add event listener
-cells.forEach(element => {
-    element.addEventListener("click", () => {
-        console.log(element);
-    });
-});
 
+// ------------------ Players ------------------
+let players = {
+    playerX: true,
+    playerO: false,
+};
 
 // ------------------ Game ------------------
 let gameBoard = {

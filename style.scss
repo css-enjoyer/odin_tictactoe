@@ -24,7 +24,7 @@ body {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 1fr 12fr;
+    grid-template-rows: 1fr 12fr .7fr;
     .header {
         background-color: var(--accent-color);
         grid-row: 1 / 2;
@@ -55,6 +55,7 @@ body {
             }
         }
         .board {
+            margin-top: 15px;
             height: clamp(250px, 35vw, 350px);
             width: clamp(250px, 35vw, 350px);
             display: grid;
@@ -109,6 +110,38 @@ body {
             color: white;
             font-size: 3rem;
             text-shadow: 0 8px 2px black;
+        }
+    }
+    .footer {
+        grid-row: 3 / 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--background-color);
+        font-weight: 300;
+        font-size: 1.2rem;
+        color: var(--accent-color);
+        text-align: center;
+        padding-bottom: 15px;
+        p {
+            text-shadow: -2px 2px 2px black;
+            display: flex;
+            align-items: center;
+            a {
+                color: var(--accent-color);
+                text-decoration: none;
+                i {
+                    margin-top: 2px;
+                    margin-left: 10px;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        transform: rotate(360deg) scale(1.2); 
+                        text-shadow: 0 0 5px black;
+                    }
+                }
+            }
         }
     }
 }

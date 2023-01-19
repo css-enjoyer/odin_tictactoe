@@ -60,18 +60,27 @@ body {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
+            box-shadow: 0 0 10px 5px #0f0f0f;
             button {
                 background-color: transparent;
                 border: 1px solid white;
                 color: white;
                 cursor: pointer;
-                transition: .1s ease-in-out;
+                // transition: .1s ease-in-out;
                 font-size: 1.5rem;
                 -webkit-tap-highlight-color: transparent;
+                transition: .2s cubic-bezier(.19,.63,.78,.43);
+            }
+            .selected-cells {
+                // background-color: red;
+                text-shadow: 0 8px 2px black;
+                padding-bottom: 13px;
+                font-size: 1.6rem;
             }
             .winning-cells {
                 background-color: var(--winning-cells-color);
                 color: var(--primary-color);
+                text-shadow: 0 8px 2px rgba(0, 0, 0, .5);
             }
             .tie-cells {
                 background-color: var(--game-over-color);

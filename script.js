@@ -10,7 +10,8 @@ let cells = [];
 for (let i = 0; i < 9; i++) {
     cells[i] = document.querySelector(`#cell-${i}`);
     cells[i].addEventListener("click", () => {
-        console.log(boardObject);
+        // console.log(boardObject);
+        cells[i].classList.add("selected-cells");
         if(cells[i].innerHTML === "") {
             if(players.playerX) {
                 cells[i].innerHTML = "X";
@@ -55,6 +56,7 @@ popup.addEventListener("click", () => {
     for (let i = 0; i < 9; i++) {
         document.querySelector(`#cell-${i}`).innerHTML = "";
         // console.log(`#cell-${i}`);
+        document.querySelector(`#cell-${i}`).classList.remove("selected-cells");
     }
     winDetails.array.forEach(element => {
         element.classList.toggle("winning-cells");

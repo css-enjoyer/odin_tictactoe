@@ -102,7 +102,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   font-size: 3rem;
-  text-shadow: 0 5px 5px black;
+  text-shadow: 0 8px 2px black;
 }
 
 @media (hover: hover) {

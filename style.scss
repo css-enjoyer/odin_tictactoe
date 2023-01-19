@@ -56,8 +56,8 @@ body {
             }
         }
         .board {
-            height: 300px;
-            width: 300px;
+            height: 400px;
+            width: 400px;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
@@ -67,12 +67,13 @@ body {
                 color: white;
                 cursor: pointer;
                 transition: .1s ease-in-out;
-                font-size: 1rem;
+                font-size: 1.5rem;
                 &:hover {
-                    background-color: rgba(255, 255, 255, .1);
+                    background-color: var(--secondary-color);
+                    color: var(--accent-color);
                 }
                 &:active {
-                    background-color: grey;
+                    background-color: var(--background-color);
                 }
             }
         }

@@ -7,7 +7,6 @@
   --button-color: #00b9e4;
   --button-hover-color: #0077c8;
   --winning-cells-color: #00b9e4;
-  --game-over-color: #ff0000;
 }
 
 * {
@@ -79,6 +78,14 @@ body {
 }
 .main .body .board button:active {
   background-color: var(--background-color);
+}
+.main .body .board .winning-cells {
+  background-color: var(--winning-cells-color);
+  color: var(--primary-color);
+}
+.main .body .board .tie-cells {
+  background-color: var(--game-over-color);
+  color: var(--primary-color);
 }
 .main .body .popup {
   position: absolute;

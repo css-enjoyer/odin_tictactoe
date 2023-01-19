@@ -7,7 +7,6 @@
     --button-color: #00b9e4;
     --button-hover-color: #0077c8;
     --winning-cells-color: #00b9e4;
-    --game-over-color: #ff0000;
 }
 * {
     margin: 0;
@@ -75,6 +74,14 @@ body {
                 &:active {
                     background-color: var(--background-color);
                 }
+            }
+            .winning-cells {
+                background-color: var(--winning-cells-color);
+                color: var(--primary-color);
+            }
+            .tie-cells {
+                background-color: var(--game-over-color);
+                color: var(--primary-color);
             }
         }
         .popup {

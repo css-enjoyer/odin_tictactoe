@@ -33,13 +33,13 @@ for (let i = 0; i < 9; i++) {
     });
 };
 
-// ------------------ Players ------------------
+// ------------------ Players ------------------ To be implemented
 let players = {
     playerX: true,
     playerO: false,
 };
 
-// ------------------ Game ------------------
+// ------------------ Game ------------------ To be implemented
 let gameBoard = {
     grid: boardObject,
     gameStart: false,

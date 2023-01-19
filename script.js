@@ -44,9 +44,10 @@ let gameBoard = {
 };
 
 // ## GameCycle 
-let popup = document.getElementById("popup");
+let popup = document.querySelector(".popup");
 popup.addEventListener("click", () => {
-    popup.style.display = "none";
+    // popup.style.display = "none";
+    popup.classList.toggle("popup-visible");
     for(let prop in boardObject) {
         boardObject[prop] = 0;
     }
@@ -56,7 +57,8 @@ popup.addEventListener("click", () => {
     }
 });
 function gameEnd() {
-    popup.style.display = "grid";
+    // popup.style.display = "grid";
+    popup.classList.toggle("popup-visible");
 };
 
 // ## Win Conditions

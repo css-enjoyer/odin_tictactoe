@@ -153,4 +153,9 @@ body {
   .body button:active {
     background-color: var(--background-color) !important;
   }
+}
+@media only screen and (max-width: 400px) {
+  .popup {
+    font-size: 2rem !important;
+  }
 }/*# sourceMappingURL=style.css.map */

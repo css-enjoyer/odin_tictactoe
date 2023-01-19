@@ -58,8 +58,8 @@ body {
   font-weight: bold;
 }
 .main .body .board {
-  height: 400px;
-  width: 400px;
+  height: clamp(250px, 35vw, 350px);
+  width: clamp(250px, 35vw, 350px);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -71,13 +71,7 @@ body {
   cursor: pointer;
   transition: 0.1s ease-in-out;
   font-size: 1.5rem;
-}
-.main .body .board button:hover {
-  background-color: var(--secondary-color);
-  color: var(--accent-color);
-}
-.main .body .board button:active {
-  background-color: var(--background-color);
+  -webkit-tap-highlight-color: transparent;
 }
 .main .body .board .winning-cells {
   background-color: var(--winning-cells-color);
@@ -109,4 +103,14 @@ body {
   color: white;
   font-size: 3rem;
   text-shadow: 0 5px 5px black;
+}
+
+@media (hover: hover) {
+  .body button:hover {
+    background-color: var(--secondary-color) !important;
+    color: var(--accent-color) !important;
+  }
+  .body button:active {
+    background-color: var(--background-color) !important;
+  }
 }/*# sourceMappingURL=style.css.map */

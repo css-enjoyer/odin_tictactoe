@@ -26,7 +26,9 @@ for (let i = 0; i < 9; i++) {
         }
         if(checkWin()) {
             gameEnd();
-        };
+        } else if (checkTie()) {
+            gameTie();
+        }
     });
 };
 
@@ -46,7 +48,6 @@ let gameBoard = {
 // ## GameCycle 
 let popup = document.querySelector(".popup");
 popup.addEventListener("click", () => {
-    // popup.style.display = "none";
     popup.classList.toggle("popup-visible");
     for(let prop in boardObject) {
         boardObject[prop] = 0;
@@ -57,9 +58,11 @@ popup.addEventListener("click", () => {
     }
 });
 function gameEnd() {
-    // popup.style.display = "grid";
     popup.classList.toggle("popup-visible");
 };
+function gameTie() {
+    popup.classList.toggle("popup-visible");
+}
 
 // ## Win Conditions
 function checkWin() {
@@ -151,6 +154,19 @@ function checkWin() {
         }
     }  
 };
+// ## Tie Conditions
+function checkTie() {
+    let counter = 0; 
+    for(let prop in boardObject) {
+        if(boardObject[prop] !== 0) {
+            counter++;
+        }
+        if(counter === 9) {
+            console.log("Tie Game");
+            return true;
+        }
+    }
+}
 
 
 
